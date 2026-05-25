@@ -50,6 +50,12 @@ export default function App() {
     }
   }
 
+  // Clear stale results the instant a preset is picked, before analysis runs.
+  function handlePresetSelected() {
+    setResult(null);
+    setError(null);
+  }
+
   // Called from the "Verify the consultant" bridge button in the results.
   function handleGoToVerify() {
     verifyRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -70,7 +76,11 @@ export default function App() {
       </header>
 
       <main className="app-main">
-        <MessageInput onAnalyze={handleAnalyze} loading={loading} />
+        <MessageInput
+          onAnalyze={handleAnalyze}
+          onPresetSelected={handlePresetSelected}
+          loading={loading}
+        />
 
         {error && <div className="error-box">{error}</div>}
 

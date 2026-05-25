@@ -37,7 +37,7 @@ const PRESETS = [
   },
 ];
 
-export default function MessageInput({ onAnalyze, loading }) {
+export default function MessageInput({ onAnalyze, onPresetSelected, loading }) {
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
 
@@ -49,6 +49,7 @@ export default function MessageInput({ onAnalyze, loading }) {
   function applyPreset(preset) {
     setText(preset.text);
     setCategory(preset.category);
+    onPresetSelected?.(); // clear any previous result immediately
   }
 
   return (
