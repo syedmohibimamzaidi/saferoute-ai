@@ -32,6 +32,7 @@ export default function App() {
   const [error, setError] = useState(null);
   const [hasRun, setHasRun] = useState(false);
   const [verifyHighlight, setVerifyHighlight] = useState(false);
+  const [verifyResetSignal, setVerifyResetSignal] = useState(0);
 
   const verifyRef = useRef(null);
 
@@ -40,6 +41,7 @@ export default function App() {
     setError(null);
     setResult(null);
     setHasRun(true);
+    setVerifyResetSignal((n) => n + 1); // isolate each analysis flow
     try {
       const data = await analyzeText(text, userCategory);
       setResult(data);
@@ -54,6 +56,7 @@ export default function App() {
   function handlePresetSelected() {
     setResult(null);
     setError(null);
+    setVerifyResetSignal((n) => n + 1); // also reset the verify panel
   }
 
   // Called from the "Verify the consultant" bridge button in the results.
@@ -97,7 +100,11 @@ export default function App() {
           </section>
         )}
 
-        <VerifyPanel ref={verifyRef} highlight={verifyHighlight} />
+        <VerifyPanel
+          ref={verifyRef}
+          highlight={verifyHighlight}
+          resetSignal={verifyResetSignal}
+        />
       </main>
 
       <footer className="app-footer">

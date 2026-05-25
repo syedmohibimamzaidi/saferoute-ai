@@ -1,6 +1,6 @@
 // components/VerifyPanel.jsx — consultant verification, linkable from analysis.
 
-import { useState, forwardRef } from "react";
+import { useState, useEffect, forwardRef } from "react";
 import { verifyConsultant } from "../lib/api.js";
 
 const STATUS_STYLES = {
@@ -10,11 +10,25 @@ const STATUS_STYLES = {
   invalid: { color: "#64748b", bg: "#f1f5f9", icon: "?" },
 };
 
-const VerifyPanel = forwardRef(function VerifyPanel({ highlight }, ref) {
+const VerifyPanel = forwardRef(function VerifyPanel(
+  { highlight, resetSignal },
+  ref,
+) {
   const [query, setQuery] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  // Reset the panel whenever App signals a new demo flow (preset / analysis).
+  // The initial render (resetSignal === 0) is skipped so nothing clears on mount.
+  useEffect(() => {
+    if (resetSignal > 0) {
+      setQuery("");
+      setResult(null);
+      setError(null);
+      setLoading(false);
+    }
+  }, [resetSignal]);
 
   async function handleVerify() {
     if (query.trim().length === 0) return;
