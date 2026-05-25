@@ -19,14 +19,20 @@ Built for the **Scale Without Borders AI Hackathon**.
 
 ## Screenshots
 
-### CRA Scam Detection
-![CRA Scam Detection](./screenshots/cra-scam.png)
+### Homepage
+![Homepage](./screenshots/homepage.png)
 
-### Fake Consultant Verification Flow
-![Consultant Verification](./screenshots/consultant-verify.png)
+### CRA Scam Detection
+![CRA Scam Analysis](./screenshots/cra-scam-analysis.png)
+
+### Scam Red Flags & Guidance
+![CRA Red Flags](./screenshots/cra-red-flags.png)
+
+### Immigration Consultant Verification
+![Consultant Verification](./screenshots/consultant-verification.png)
 
 ### Legitimate Message Detection
-![Legitimate Message](./screenshots/legit-message.png)
+![Legitimate Message](./screenshots/legitimate-message.png)
 
 ---
 
