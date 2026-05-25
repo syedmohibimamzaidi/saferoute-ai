@@ -1,0 +1,432 @@
+{
+  "version": "2026-05",
+  "sources": [
+    "Canadian Anti-Fraud Centre (CAFC)",
+    "Immigration, Refugees and Citizenship Canada (IRCC)",
+    "Canada Revenue Agency (CRA)",
+    "Royal Canadian Mounted Police (RCMP)",
+    "College of Immigration and Citizenship Consultants (CICC)"
+  ],
+  "patterns": [
+    {
+      "id": "cra-001",
+      "category": "cra",
+      "title": "CRA arrest / deportation threat",
+      "description": "A caller or message claims to be from the Canada Revenue Agency, says taxes are owed, and threatens arrest or deportation unless immediate payment is made.",
+      "indicators": [
+        "threatens arrest, jail, or deportation",
+        "demands immediate payment",
+        "requests payment by gift card, cryptocurrency, or e-transfer",
+        "creates urgency and discourages hanging up or checking with anyone"
+      ],
+      "keywords": [
+        "CRA",
+        "tax",
+        "taxes",
+        "arrest",
+        "warrant",
+        "deport",
+        "jail",
+        "gift card",
+        "bitcoin",
+        "police"
+      ],
+      "exampleText": "This is the CRA. A warrant has been issued for your arrest due to tax fraud. Pay $2,400 in gift cards immediately to avoid deportation.",
+      "whyTargetsNewcomers": "Newcomers may be unfamiliar with how the CRA actually communicates and may fear that any government issue could affect their immigration status.",
+      "recommendedAction": "Hang up or do not reply. The CRA never threatens arrest or demands gift cards. Verify any tax matter by logging into CRA My Account or calling the official CRA number.",
+      "source": "CRA",
+      "severity": "critical"
+    },
+    {
+      "id": "cra-002",
+      "category": "cra",
+      "title": "Fake CRA refund / benefit phishing link",
+      "description": "An email or text claims you are owed a tax refund or benefit and asks you to click a link and enter personal or banking information to receive it.",
+      "indicators": [
+        "promises a refund or benefit payment",
+        "asks you to click a link to 'claim' money",
+        "requests SIN, banking, or login details",
+        "link leads to a fake site mimicking an official CRA login page"
+      ],
+      "keywords": [
+        "CRA",
+        "refund",
+        "benefit",
+        "claim",
+        "interac",
+        "deposit",
+        "click",
+        "link",
+        "verify account"
+      ],
+      "exampleText": "Canada Revenue Agency: You have a refund of $458.00 pending. Claim it within 24 hours: cra-refund-secure.com/claim",
+      "whyTargetsNewcomers": "Newcomers expecting GST/HST credits or other benefits may not yet know that the CRA never sends refunds by text or email link.",
+      "recommendedAction": "Do not click the link. The CRA never sends refunds by e-transfer or text. Check your CRA My Account directly to confirm any real benefit.",
+      "source": "CRA",
+      "severity": "high"
+    },
+    {
+      "id": "job-001",
+      "category": "job",
+      "title": "Overpayment / fake cheque job scam",
+      "description": "A fake employer 'hires' the victim, sends a cheque for more than is owed, and asks the victim to return the difference before the cheque bounces.",
+      "indicators": [
+        "job offer made without any interview",
+        "sends a cheque or payment before any work is done",
+        "asks you to forward, wire, or e-transfer money back",
+        "communication only over WhatsApp, Telegram, or personal email"
+      ],
+      "keywords": [
+        "job offer",
+        "hired",
+        "cheque",
+        "check",
+        "deposit",
+        "WhatsApp",
+        "no interview",
+        "wire back",
+        "e-transfer"
+      ],
+      "exampleText": "Congratulations! You're hired as a remote admin assistant. We'll mail you a cheque for equipment — deposit it and e-transfer $500 to our vendor.",
+      "whyTargetsNewcomers": "International students urgently seeking work within study-permit limits are more likely to accept offers that skip normal hiring steps.",
+      "recommendedAction": "Never deposit a cheque from an unknown employer or forward money. Legitimate employers do not ask you to handle their funds.",
+      "source": "CAFC",
+      "severity": "high"
+    },
+    {
+      "id": "job-002",
+      "category": "job",
+      "title": "Upfront fee for job, training, or work permit",
+      "description": "A supposed employer or agency offers a job but requires an upfront payment for training, equipment, a background check, or help with a work permit.",
+      "indicators": [
+        "requires payment before you can start work",
+        "charges for training, uniforms, or a 'processing' fee",
+        "offers to arrange a work permit or LMIA for a fee",
+        "pressures you to pay quickly to secure the position"
+      ],
+      "keywords": [
+        "job",
+        "fee",
+        "training fee",
+        "processing fee",
+        "work permit",
+        "LMIA",
+        "registration",
+        "deposit",
+        "secure your spot"
+      ],
+      "exampleText": "Your job application is approved. Pay the $300 onboarding and work permit processing fee today to confirm your start date.",
+      "whyTargetsNewcomers": "Newcomers may not know that legitimate Canadian employers never charge candidates fees, and that LMIA costs are paid by employers, not workers.",
+      "recommendedAction": "Do not pay. Legitimate employers never charge you to get hired. Employers, not workers, pay LMIA fees.",
+      "source": "CAFC",
+      "severity": "high"
+    },
+    {
+      "id": "job-003",
+      "category": "job",
+      "title": "Fake recruiter impersonating a real company",
+      "description": "A scammer poses as a recruiter from a well-known company, using a lookalike email domain or messaging app, to collect personal information or fees.",
+      "indicators": [
+        "recruiter email uses a free or lookalike domain, not the real company domain",
+        "interview conducted only over text chat",
+        "asks for SIN, banking details, or copies of ID early in the process",
+        "job and pay sound unusually generous for minimal work"
+      ],
+      "keywords": [
+        "recruiter",
+        "hiring",
+        "interview",
+        "gmail",
+        "company",
+        "remote",
+        "position",
+        "HR",
+        "onboarding"
+      ],
+      "exampleText": "Hi, I'm a recruiter from a major bank. We reviewed your resume and want to hire you. Please send your SIN and a void cheque to start onboarding.",
+      "whyTargetsNewcomers": "Newcomers may not know typical Canadian hiring practices or how to spot a fake company domain.",
+      "recommendedAction": "Verify the recruiter through the company's official website and careers page. Never send your SIN or banking details before a verified, signed offer.",
+      "source": "CAFC",
+      "severity": "medium"
+    },
+    {
+      "id": "housing-001",
+      "category": "housing",
+      "title": "Phantom rental / deposit before viewing",
+      "description": "A scammer lists a property they do not control, often below market rate, and asks for a deposit or first month's rent before any viewing.",
+      "indicators": [
+        "landlord is 'out of the country' and cannot show the unit",
+        "asks for a deposit or rent before any viewing or signed lease",
+        "price is well below the local market rate",
+        "pushes for an e-transfer to 'hold' or 'secure' the unit"
+      ],
+      "keywords": [
+        "rent",
+        "deposit",
+        "e-transfer",
+        "out of country",
+        "viewing",
+        "first month",
+        "keys",
+        "landlord",
+        "apartment"
+      ],
+      "exampleText": "I'm working abroad so I can't show the apartment, but e-transfer first and last month's rent and I'll mail you the keys.",
+      "whyTargetsNewcomers": "Newcomers often need to secure housing before arriving in Canada and cannot view units in person, which scammers exploit.",
+      "recommendedAction": "Never send money before viewing a unit in person and signing a lease. Verify the listing and the person's identity independently.",
+      "source": "RCMP",
+      "severity": "high"
+    },
+    {
+      "id": "housing-002",
+      "category": "housing",
+      "title": "Duplicated or stolen rental listing",
+      "description": "A scammer copies photos and details from a genuine listing and reposts it at a lower price to collect deposits from multiple victims.",
+      "indicators": [
+        "the same photos appear on other listings at different prices",
+        "listing pushes you to act fast before 'others' take it",
+        "communication moves quickly to e-transfer",
+        "landlord avoids phone or video calls"
+      ],
+      "keywords": [
+        "listing",
+        "rent",
+        "apartment",
+        "photos",
+        "deposit",
+        "available now",
+        "act fast",
+        "marketplace",
+        "kijiji"
+      ],
+      "exampleText": "This downtown condo is available now and going fast. Send a $1,000 deposit today to reserve it before someone else does.",
+      "whyTargetsNewcomers": "Newcomers comparing listings remotely may not recognize a price that is too good to be true for a given city.",
+      "recommendedAction": "Do a reverse image search on the listing photos. If the same images appear elsewhere, treat it as a scam and never send a deposit.",
+      "source": "CAFC",
+      "severity": "high"
+    },
+    {
+      "id": "immigration-001",
+      "category": "immigration",
+      "title": "Fake immigration consultant / guaranteed PR",
+      "description": "An unlicensed 'consultant' promises guaranteed permanent residency, faster processing, or insider IRCC contacts in exchange for large fees.",
+      "indicators": [
+        "guarantees PR, a visa, or application approval",
+        "claims special contacts or influence inside IRCC",
+        "is not a Regulated Canadian Immigration Consultant (RCIC) on the CICC register",
+        "asks for a large cash payment with no written contract"
+      ],
+      "keywords": [
+        "guaranteed PR",
+        "consultant",
+        "IRCC",
+        "visa",
+        "fast processing",
+        "approval",
+        "agent",
+        "immigration",
+        "RCIC"
+      ],
+      "exampleText": "Pay $5,000 cash and I guarantee your PR in 3 months — I have a contact inside IRCC who handles my files personally.",
+      "whyTargetsNewcomers": "Immigration outcomes are high-stakes and confusing, so newcomers may trust anyone claiming authority or insider access.",
+      "recommendedAction": "No one can guarantee an immigration outcome. Verify any consultant on the CICC public register at college-ic.ca. Only RCICs, lawyers, and notaries can be paid to represent you.",
+      "source": "IRCC",
+      "severity": "critical"
+    },
+    {
+      "id": "immigration-002",
+      "category": "immigration",
+      "title": "Fake IRCC email or call demanding payment or data",
+      "description": "A scammer impersonates IRCC or a visa office, claiming there is a problem with the victim's application and demanding payment or personal information.",
+      "indicators": [
+        "claims your application has a problem or extra fee owed",
+        "demands payment by gift card, cryptocurrency, or e-transfer",
+        "threatens cancellation of your visa, permit, or status",
+        "email comes from a non-government domain (not canada.ca or gc.ca)"
+      ],
+      "keywords": [
+        "IRCC",
+        "visa office",
+        "application",
+        "fee owed",
+        "permit cancelled",
+        "status",
+        "biometrics",
+        "gift card",
+        "urgent"
+      ],
+      "exampleText": "IRCC NOTICE: Your study permit will be cancelled unless an outstanding fee of $680 is paid by gift card within 48 hours.",
+      "whyTargetsNewcomers": "A threat to immigration status is terrifying to newcomers, who may pay out of fear before verifying anything.",
+      "recommendedAction": "IRCC never demands payment by gift card or threatens instant cancellation. Official messages come from canada.ca or gc.ca addresses. Log into your IRCC account to check your real application status.",
+      "source": "IRCC",
+      "severity": "critical"
+    },
+    {
+      "id": "immigration-003",
+      "category": "immigration",
+      "title": "Fake job offer with fraudulent immigration documents",
+      "description": "A scammer offers a Canadian job package that includes fake LMIA or work permit documents, charging large fees for paperwork that is not genuine.",
+      "indicators": [
+        "sells a 'complete package' of job plus immigration documents",
+        "provides documents that cannot be verified with IRCC or the employer",
+        "charges thousands of dollars upfront for paperwork",
+        "discourages you from contacting the employer or IRCC directly"
+      ],
+      "keywords": [
+        "LMIA",
+        "work permit",
+        "job package",
+        "documents",
+        "employer",
+        "offer letter",
+        "agent",
+        "immigration"
+      ],
+      "exampleText": "We offer a full Canada job package with LMIA and work permit included for $8,000. Documents delivered in 2 weeks, no interview needed.",
+      "whyTargetsNewcomers": "International students and foreign workers may unknowingly use fake documents, putting their status at serious risk.",
+      "recommendedAction": "Verify any job and documents directly with the employer and IRCC. If you are an international student who unknowingly used fraudulent documents, IRCC has a process that may allow you to stay — report it rather than hiding it.",
+      "source": "IRCC",
+      "severity": "critical"
+    },
+    {
+      "id": "banking-001",
+      "category": "banking",
+      "title": "Bank fraud-department impersonation",
+      "description": "A caller or text claims to be your bank's fraud department, says your account is compromised, and pressures you to move money or share security codes.",
+      "indicators": [
+        "claims your account has suspicious activity or is 'frozen'",
+        "asks you to read out a one-time passcode or PIN",
+        "tells you to move money to a 'safe' or 'secure' account",
+        "insists you stay on the line and not contact anyone"
+      ],
+      "keywords": [
+        "bank",
+        "fraud department",
+        "account",
+        "suspicious",
+        "frozen",
+        "passcode",
+        "OTP",
+        "PIN",
+        "safe account",
+        "transfer"
+      ],
+      "exampleText": "This is your bank's fraud team. Your account is compromised. Read me the 6-digit code we just texted you so we can secure it.",
+      "whyTargetsNewcomers": "Newcomers still learning how Canadian banks operate may not know that a real bank never asks for one-time codes.",
+      "recommendedAction": "Hang up. A real bank never asks for one-time passcodes or tells you to move money. Call the number on the back of your bank card to verify.",
+      "source": "CAFC",
+      "severity": "high"
+    },
+    {
+      "id": "banking-002",
+      "category": "banking",
+      "title": "Fake Interac e-Transfer notification",
+      "description": "A text or email mimics an Interac e-Transfer deposit notice and links to a fake bank login page that steals online banking credentials.",
+      "indicators": [
+        "claims an e-transfer is waiting to be deposited",
+        "link does not lead to your real bank's website",
+        "asks you to log in or 'verify' to receive funds",
+        "sender or link domain looks slightly off or unfamiliar"
+      ],
+      "keywords": [
+        "interac",
+        "e-transfer",
+        "deposit",
+        "money",
+        "click",
+        "verify",
+        "bank login",
+        "pending transfer"
+      ],
+      "exampleText": "INTERAC: You have received a transfer of $250. Click here to deposit: secure-interac-deposit.net/login",
+      "whyTargetsNewcomers": "Newcomers unfamiliar with how Interac e-Transfers normally appear may not recognize a fake notification.",
+      "recommendedAction": "Do not click the link. Log into your bank directly through its official app or website to check for any real transfer.",
+      "source": "CAFC",
+      "severity": "medium"
+    },
+    {
+      "id": "phishing-001",
+      "category": "phishing",
+      "title": "Account suspension / verify-now phishing",
+      "description": "An email or text claims an account (email, streaming, delivery, government) will be suspended unless you click a link and verify your identity.",
+      "indicators": [
+        "warns your account will be closed, locked, or suspended",
+        "creates a tight deadline to act",
+        "link domain does not match the real organization",
+        "asks for login credentials or payment details on the linked page"
+      ],
+      "keywords": [
+        "account",
+        "suspended",
+        "verify",
+        "locked",
+        "click",
+        "confirm",
+        "password",
+        "expire",
+        "unusual activity"
+      ],
+      "exampleText": "Your account has been locked due to unusual activity. Verify your identity within 24 hours or it will be permanently closed: account-verify-now.com",
+      "whyTargetsNewcomers": "Newcomers setting up many new accounts in Canada may not yet recognize the warning signs of a phishing link.",
+      "recommendedAction": "Do not click the link. Open the real service directly through its official app or website to check your account status.",
+      "source": "CAFC",
+      "severity": "medium"
+    },
+    {
+      "id": "phishing-002",
+      "category": "phishing",
+      "title": "Parcel delivery fee scam",
+      "description": "A text claims a package cannot be delivered until a small customs or redelivery fee is paid, linking to a page that harvests payment card details.",
+      "indicators": [
+        "claims a parcel is held pending a small fee",
+        "link goes to a site imitating Canada Post or a courier",
+        "asks for a card number to pay a tiny fee",
+        "you were not expecting a delivery, or no tracking number is given"
+      ],
+      "keywords": [
+        "parcel",
+        "package",
+        "delivery",
+        "Canada Post",
+        "customs fee",
+        "redelivery",
+        "tracking",
+        "courier",
+        "click"
+      ],
+      "exampleText": "Canada Post: Your parcel is held pending a $1.99 customs fee. Pay now to release delivery: canadapost-redelivery.com",
+      "whyTargetsNewcomers": "Newcomers often expect parcels from family abroad and may not know couriers do not collect fees this way by text.",
+      "recommendedAction": "Do not pay or enter card details. Verify any delivery directly on the official courier's website using a tracking number you trust.",
+      "source": "CAFC",
+      "severity": "medium"
+    },
+    {
+      "id": "phishing-003",
+      "category": "phishing",
+      "title": "Romance or friendship scam leading to money requests",
+      "description": "A scammer builds an online relationship over weeks or months, then invents an emergency or investment opportunity to request money.",
+      "indicators": [
+        "relationship is online-only and they always avoid meeting or video calls",
+        "professes strong feelings unusually quickly",
+        "eventually asks for money for an emergency, travel, or an investment",
+        "requests payment by gift card, cryptocurrency, or e-transfer"
+      ],
+      "keywords": [
+        "love",
+        "relationship",
+        "emergency",
+        "investment",
+        "crypto",
+        "gift card",
+        "send money",
+        "stuck",
+        "hospital"
+      ],
+      "exampleText": "My love, I'm stuck overseas with a medical emergency. Please send $1,500 by crypto so I can finally come to be with you.",
+      "whyTargetsNewcomers": "Newcomers who feel isolated and are building new social connections can be especially vulnerable to romance scams.",
+      "recommendedAction": "Never send money to someone you have not met in person. Talk to a trusted friend or family member before acting on any online request for money.",
+      "source": "CAFC",
+      "severity": "high"
+    }
+  ]
+}
