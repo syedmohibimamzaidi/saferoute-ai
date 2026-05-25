@@ -1,6 +1,6 @@
 // lib/api.js — single fetch wrapper for all backend calls.
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
 /**
  * Sends suspicious text to the backend for analysis.
@@ -9,7 +9,7 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
  * @returns {Promise<object>} the structured analysis response
  */
 export async function analyzeText(text, userCategory) {
-  const res = await fetch(`${API_URL}/api/analyze`, {
+  const res = await fetch(`${API_BASE_URL}/api/analyze`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text, userCategory }),
@@ -29,7 +29,7 @@ export async function analyzeText(text, userCategory) {
  * @returns {Promise<object>} verdict object
  */
 export async function verifyConsultant(query) {
-  const res = await fetch(`${API_URL}/api/verify`, {
+  const res = await fetch(`${API_BASE_URL}/api/verify`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query }),
