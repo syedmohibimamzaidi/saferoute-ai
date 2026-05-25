@@ -1,0 +1,18 @@
+{
+  "name": "saferoute-ai-server",
+  "version": "1.0.0",
+  "description": "SafeRoute AI backend - fraud safety assistant for newcomers to Canada",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "openai": "^6.39.0",
+    "zod": "^4.4.3"
+  }
+}
