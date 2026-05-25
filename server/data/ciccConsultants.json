@@ -1,0 +1,70 @@
+{
+  "registerName": "CICC Public Register (SafeRoute AI demo sample)",
+  "note": "Representative sample for hackathon demo. The authoritative source is the College of Immigration and Citizenship Consultants public register at college-ic.ca.",
+  "consultants": [
+    {
+      "rcicNumber": "R512345",
+      "fullName": "Aisha Rahman",
+      "status": "active",
+      "designation": "RCIC",
+      "city": "Toronto",
+      "province": "ON"
+    },
+    {
+      "rcicNumber": "R610982",
+      "fullName": "David Chen",
+      "status": "active",
+      "designation": "RCIC-IRB",
+      "city": "Vancouver",
+      "province": "BC"
+    },
+    {
+      "rcicNumber": "R448217",
+      "fullName": "Maria Santos",
+      "status": "active",
+      "designation": "RCIC",
+      "city": "Calgary",
+      "province": "AB"
+    },
+    {
+      "rcicNumber": "R705531",
+      "fullName": "Jean Tremblay",
+      "status": "active",
+      "designation": "RCIC",
+      "city": "Montreal",
+      "province": "QC"
+    },
+    {
+      "rcicNumber": "R329044",
+      "fullName": "Priya Sharma",
+      "status": "suspended",
+      "designation": "RCIC",
+      "city": "Mississauga",
+      "province": "ON"
+    },
+    {
+      "rcicNumber": "R287610",
+      "fullName": "Michael O'Brien",
+      "status": "revoked",
+      "designation": "RCIC",
+      "city": "Edmonton",
+      "province": "AB"
+    },
+    {
+      "rcicNumber": "R556789",
+      "fullName": "Fatima Al-Sayed",
+      "status": "active",
+      "designation": "RISIA",
+      "city": "Ottawa",
+      "province": "ON"
+    },
+    {
+      "rcicNumber": "R190234",
+      "fullName": "Robert Kim",
+      "status": "active",
+      "designation": "RCIC",
+      "city": "Winnipeg",
+      "province": "MB"
+    }
+  ]
+}
