@@ -102,7 +102,10 @@
         "requires payment before you can start work",
         "charges for training, uniforms, or a 'processing' fee",
         "offers to arrange a work permit or LMIA for a fee",
-        "pressures you to pay quickly to secure the position"
+        "pressures you to pay quickly to secure the position",
+        "requires purchasing a certification or onboarding package before starting work",
+        "uses a private payment link and says the cost will not be reimbursed",
+        "threatens to give the position to another applicant if you delay payment"
       ],
       "keywords": [
         "job",
@@ -113,7 +116,12 @@
         "LMIA",
         "registration",
         "deposit",
-        "secure your spot"
+        "secure your spot",
+        "certification package",
+        "required certification",
+        "private payment link",
+        "not reimburse",
+        "another applicant"
       ],
       "exampleText": "Your job application is approved. Pay the $300 onboarding and work permit processing fee today to confirm your start date.",
       "whyTargetsNewcomers": "Newcomers may not know that legitimate Canadian employers never charge candidates fees, and that LMIA costs are paid by employers, not workers.",

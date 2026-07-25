@@ -1,0 +1,92 @@
+[
+  {
+    "id": "UI01",
+    "title": "Preset clears stale analysis",
+    "steps": [
+      "Run any preset and wait for a result.",
+      "Click a different preset without analyzing it."
+    ],
+    "expected": "The previous analysis disappears immediately."
+  },
+  {
+    "id": "UI02",
+    "title": "New analysis resets consultant result",
+    "steps": [
+      "Verify R512345 and wait for the result.",
+      "Run a message analysis."
+    ],
+    "expected": "The consultant query and result are cleared."
+  },
+  {
+    "id": "UI03",
+    "title": "Edited text is not paired with stale output",
+    "steps": [
+      "Run an analysis.",
+      "Edit the textarea after the result appears."
+    ],
+    "expected": "The interface must not imply the old result analyzes the new text. Record the current behaviour; clearing on edit is preferred."
+  },
+  {
+    "id": "UI04",
+    "title": "Failed request does not preserve old result",
+    "steps": [
+      "Run a successful analysis.",
+      "Stop the backend or use an invalid API URL.",
+      "Submit a new analysis."
+    ],
+    "expected": "An error is shown and the previous result does not remain visible as if current."
+  },
+  {
+    "id": "UI05",
+    "title": "Repeated clicks do not overlap requests",
+    "steps": [
+      "Enter a valid message.",
+      "Click Analyze rapidly several times."
+    ],
+    "expected": "The button disables while loading and only one visible result is produced."
+  },
+  {
+    "id": "UI06",
+    "title": "Loading and error states",
+    "steps": [
+      "Run an analysis after a backend cold start.",
+      "Repeat with the backend unavailable."
+    ],
+    "expected": "A loading state appears; the failure message is understandable and the interface recovers."
+  },
+  {
+    "id": "UI07",
+    "title": "Legitimate result is calm",
+    "steps": [
+      "Run the Legitimate message preset."
+    ],
+    "expected": "Low-risk presentation is reassuring, contains no manufactured red flags, and does not use alarmist language."
+  },
+  {
+    "id": "UI08",
+    "title": "Fuzzy consultant match is qualified",
+    "steps": [
+      "Search for Aisha Raman."
+    ],
+    "expected": "A possible/closest match is shown with an explicit fuzzy-match warning; it is not presented as an exact verification."
+  },
+  {
+    "id": "UI09",
+    "title": "Mobile layout",
+    "steps": [
+      "Open browser responsive mode at 390 × 844.",
+      "Run a scam and a legitimate scenario.",
+      "Open the consultant panel."
+    ],
+    "expected": "No horizontal overflow, clipped controls, unreadable text, or broken result cards."
+  },
+  {
+    "id": "UI10",
+    "title": "Long valid input layout",
+    "steps": [
+      "Paste a message of roughly 7,000–9,000 characters.",
+      "Run the analysis."
+    ],
+    "expected": "The request is accepted, the layout remains usable, and long content does not overflow result cards."
+  }
+]

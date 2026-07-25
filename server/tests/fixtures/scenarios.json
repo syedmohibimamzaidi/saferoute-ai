@@ -1,0 +1,948 @@
+[
+  {
+    "id": "S01",
+    "group": "direct",
+    "title": "CRA arrest threat",
+    "groundTruth": "scam",
+    "categoryHint": "cra",
+    "input": "Final notice from the Canada Revenue Agency: an arrest warrant has been approved because of unpaid income tax. Buy $1,800 in prepaid gift cards today and send the codes to prevent police action and removal from Canada.",
+    "expectedCategories": [
+      "cra"
+    ],
+    "expectedPatternIds": [
+      "cra-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "arrest",
+        "warrant",
+        "police"
+      ],
+      [
+        "gift card",
+        "prepaid"
+      ],
+      [
+        "urgent",
+        "today",
+        "immediate"
+      ]
+    ]
+  },
+  {
+    "id": "S02",
+    "group": "direct",
+    "title": "CRA refund phishing",
+    "groundTruth": "scam",
+    "categoryHint": "cra",
+    "input": "From: Canada Tax Benefits. A $612 refund is waiting for you. Use the secure link below within 12 hours and enter your SIN and online banking details to receive the deposit: canada-benefit-claim.info.",
+    "expectedCategories": [
+      "cra",
+      "phishing"
+    ],
+    "expectedPatternIds": [
+      "cra-002"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "refund",
+        "benefit"
+      ],
+      [
+        "link",
+        "website"
+      ],
+      [
+        "SIN",
+        "banking",
+        "login"
+      ]
+    ]
+  },
+  {
+    "id": "S03",
+    "group": "direct",
+    "title": "Fake cheque job",
+    "groundTruth": "scam",
+    "categoryHint": "job",
+    "input": "You have been selected as a remote office assistant without an interview. We will courier a cheque for your laptop. Deposit it, keep your salary, and send $700 by e-transfer to our equipment supplier.",
+    "expectedCategories": [
+      "job"
+    ],
+    "expectedPatternIds": [
+      "job-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "no interview",
+        "without an interview"
+      ],
+      [
+        "cheque",
+        "check"
+      ],
+      [
+        "e-transfer",
+        "send money",
+        "supplier"
+      ]
+    ]
+  },
+  {
+    "id": "S04",
+    "group": "direct",
+    "title": "Upfront job fee",
+    "groundTruth": "scam",
+    "categoryHint": "job",
+    "input": "Your warehouse position is approved. Before we issue your start date, pay a $350 registration and mandatory training charge. The payment must be completed tonight to keep the job.",
+    "expectedCategories": [
+      "job"
+    ],
+    "expectedPatternIds": [
+      "job-002"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "fee",
+        "charge",
+        "payment"
+      ],
+      [
+        "training",
+        "registration"
+      ],
+      [
+        "tonight",
+        "urgent",
+        "keep the job"
+      ]
+    ]
+  },
+  {
+    "id": "S05",
+    "group": "direct",
+    "title": "Fake recruiter impersonation",
+    "groundTruth": "scam",
+    "categoryHint": "job",
+    "input": "Hello, I am an HR recruiter for RBC contacting you from rbc.jobs.hr@gmail.com. The interview will happen only through Telegram. Send your SIN, passport scan, and void cheque so we can complete onboarding for a $55-per-hour data-entry role.",
+    "expectedCategories": [
+      "job"
+    ],
+    "expectedPatternIds": [
+      "job-003"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "gmail",
+        "personal email",
+        "domain"
+      ],
+      [
+        "Telegram",
+        "text interview"
+      ],
+      [
+        "SIN",
+        "passport",
+        "void cheque"
+      ]
+    ]
+  },
+  {
+    "id": "S06",
+    "group": "direct",
+    "title": "Deposit before rental viewing",
+    "groundTruth": "scam",
+    "categoryHint": "housing",
+    "input": "I own the apartment but I am currently overseas and cannot arrange a viewing. Send first and last month’s rent by e-transfer today and I will ship the keys to you. The price is $700 below similar units.",
+    "expectedCategories": [
+      "housing"
+    ],
+    "expectedPatternIds": [
+      "housing-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "overseas",
+        "abroad",
+        "cannot view"
+      ],
+      [
+        "e-transfer",
+        "deposit",
+        "rent"
+      ],
+      [
+        "keys",
+        "before viewing"
+      ]
+    ]
+  },
+  {
+    "id": "S07",
+    "group": "direct",
+    "title": "Stolen rental listing",
+    "groundTruth": "scam",
+    "categoryHint": "housing",
+    "input": "Downtown condo available immediately. Several people are interested, so send a $1,000 holding deposit now through Marketplace chat. I cannot do a phone or video call. The photos may also appear in older listings because I reused them.",
+    "expectedCategories": [
+      "housing"
+    ],
+    "expectedPatternIds": [
+      "housing-002"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "deposit",
+        "holding"
+      ],
+      [
+        "act fast",
+        "several people",
+        "immediately"
+      ],
+      [
+        "phone",
+        "video call",
+        "photos"
+      ]
+    ]
+  },
+  {
+    "id": "S08",
+    "group": "direct",
+    "title": "Guaranteed PR consultant",
+    "groundTruth": "scam",
+    "categoryHint": "immigration",
+    "input": "I guarantee permanent residence in ninety days because my cousin works inside IRCC. Pay $5,000 cash and do not ask for a written contract. My licence number is not important because I have special approval.",
+    "expectedCategories": [
+      "immigration"
+    ],
+    "expectedPatternIds": [
+      "immigration-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "guarantee",
+        "permanent residence",
+        "PR"
+      ],
+      [
+        "inside IRCC",
+        "special contact"
+      ],
+      [
+        "cash",
+        "licence",
+        "contract"
+      ]
+    ]
+  },
+  {
+    "id": "S09",
+    "group": "direct",
+    "title": "Fake IRCC payment threat",
+    "groundTruth": "scam",
+    "categoryHint": "immigration",
+    "input": "IRCC urgent notice: your study permit will be cancelled within 24 hours because an extra processing amount is unpaid. Purchase cryptocurrency worth $680 and reply with the wallet confirmation to preserve your status.",
+    "expectedCategories": [
+      "immigration"
+    ],
+    "expectedPatternIds": [
+      "immigration-002"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "permit",
+        "status",
+        "cancelled"
+      ],
+      [
+        "cryptocurrency",
+        "payment"
+      ],
+      [
+        "24 hours",
+        "urgent"
+      ]
+    ]
+  },
+  {
+    "id": "S10",
+    "group": "direct",
+    "title": "Fraudulent job and immigration package",
+    "groundTruth": "scam",
+    "categoryHint": "immigration",
+    "input": "Our agency sells a complete Canadian employment package: employer offer, LMIA, and work permit for $8,500. No interview is required. Do not contact the employer or IRCC because that could delay our private process.",
+    "expectedCategories": [
+      "immigration",
+      "job"
+    ],
+    "expectedPatternIds": [
+      "immigration-003"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "LMIA",
+        "work permit",
+        "job package"
+      ],
+      [
+        "8,500",
+        "payment",
+        "upfront"
+      ],
+      [
+        "no interview",
+        "do not contact"
+      ]
+    ]
+  },
+  {
+    "id": "S11",
+    "group": "direct",
+    "title": "Bank fraud-team impersonation",
+    "groundTruth": "scam",
+    "categoryHint": "banking",
+    "input": "This is the fraud department from your bank. Your account is frozen. Stay on the phone and read us the one-time code we just sent, then transfer your balance to the protected account number below.",
+    "expectedCategories": [
+      "banking"
+    ],
+    "expectedPatternIds": [
+      "banking-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "fraud department",
+        "account frozen"
+      ],
+      [
+        "one-time code",
+        "OTP",
+        "code"
+      ],
+      [
+        "transfer",
+        "protected account",
+        "safe account"
+      ]
+    ]
+  },
+  {
+    "id": "S12",
+    "group": "direct",
+    "title": "Fake Interac transfer",
+    "groundTruth": "scam",
+    "categoryHint": "banking",
+    "input": "INTERAC notification: Jordan sent you $275. The deposit is pending. Sign in through interac-secure-receive.co and verify your bank password before the transfer expires.",
+    "expectedCategories": [
+      "banking",
+      "phishing"
+    ],
+    "expectedPatternIds": [
+      "banking-002"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "Interac",
+        "transfer",
+        "deposit"
+      ],
+      [
+        "link",
+        "domain",
+        "website"
+      ],
+      [
+        "password",
+        "sign in",
+        "verify"
+      ]
+    ]
+  },
+  {
+    "id": "S13",
+    "group": "direct",
+    "title": "Account suspension phishing",
+    "groundTruth": "scam",
+    "categoryHint": "phishing",
+    "input": "Your Microsoft account has been locked after unusual activity. Confirm your password and card information at microsoft-security-check.net within six hours or the account will be permanently deleted.",
+    "expectedCategories": [
+      "phishing"
+    ],
+    "expectedPatternIds": [
+      "phishing-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "locked",
+        "deleted",
+        "suspended"
+      ],
+      [
+        "password",
+        "card information"
+      ],
+      [
+        "six hours",
+        "deadline",
+        "link"
+      ]
+    ]
+  },
+  {
+    "id": "S14",
+    "group": "direct",
+    "title": "Parcel fee phishing",
+    "groundTruth": "scam",
+    "categoryHint": "phishing",
+    "input": "Canada Post delivery update: your parcel is being held. Pay a $2.14 redelivery charge by entering your card at canadapost-fee-pay.com. No tracking number is available.",
+    "expectedCategories": [
+      "phishing"
+    ],
+    "expectedPatternIds": [
+      "phishing-002"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "parcel",
+        "Canada Post",
+        "delivery"
+      ],
+      [
+        "fee",
+        "charge",
+        "card"
+      ],
+      [
+        "tracking",
+        "link",
+        "website"
+      ]
+    ]
+  },
+  {
+    "id": "S15",
+    "group": "direct",
+    "title": "Romance scam money request",
+    "groundTruth": "scam",
+    "categoryHint": "phishing",
+    "input": "We have only spoken online for two weeks, but I know you are my soulmate. I cannot video call because my camera is broken. I am stuck at a hospital overseas and need you to send $1,500 in cryptocurrency tonight.",
+    "expectedCategories": [
+      "phishing"
+    ],
+    "expectedPatternIds": [
+      "phishing-003"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "online",
+        "video call"
+      ],
+      [
+        "love",
+        "soulmate",
+        "two weeks"
+      ],
+      [
+        "hospital",
+        "cryptocurrency",
+        "send money"
+      ]
+    ]
+  },
+  {
+    "id": "P01",
+    "group": "paraphrased",
+    "title": "CRA threat without stock phrasing",
+    "groundTruth": "scam",
+    "categoryHint": "",
+    "input": "A caller says a federal tax file has been transferred to law enforcement. They say officers will arrive unless I buy prepaid store vouchers and provide the numbers before the call ends.",
+    "expectedCategories": [
+      "cra"
+    ],
+    "expectedPatternIds": [
+      "cra-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "law enforcement",
+        "officers"
+      ],
+      [
+        "prepaid",
+        "vouchers"
+      ],
+      [
+        "before the call ends",
+        "urgent"
+      ]
+    ]
+  },
+  {
+    "id": "P02",
+    "group": "paraphrased",
+    "title": "Job fee using indirect wording",
+    "groundTruth": "scam",
+    "categoryHint": "",
+    "input": "The employer says I can begin Monday after I purchase their required certification package from a private payment link. They will not reimburse the cost, and the place will go to another applicant if I wait.",
+    "expectedCategories": [
+      "job"
+    ],
+    "expectedPatternIds": [
+      "job-002"
+    ],
+    "expectedRiskLevels": [
+      "medium",
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "purchase",
+        "cost",
+        "payment"
+      ],
+      [
+        "certification",
+        "required"
+      ],
+      [
+        "another applicant",
+        "wait",
+        "pressure"
+      ]
+    ]
+  },
+  {
+    "id": "P03",
+    "group": "paraphrased",
+    "title": "Housing deposit with softer language",
+    "groundTruth": "scam",
+    "categoryHint": "",
+    "input": "The owner says the unit cannot be toured because a relative has the keys. To remove the advertisement and reserve it, I need to send two months of rent electronically before receiving a lease.",
+    "expectedCategories": [
+      "housing"
+    ],
+    "expectedPatternIds": [
+      "housing-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "cannot be toured",
+        "keys"
+      ],
+      [
+        "reserve",
+        "send",
+        "rent"
+      ],
+      [
+        "before",
+        "lease"
+      ]
+    ]
+  },
+  {
+    "id": "P04",
+    "group": "paraphrased",
+    "title": "Immigration influence claim",
+    "groundTruth": "scam",
+    "categoryHint": "",
+    "input": "An adviser says approvals are certain because they know the officers who review applications. They want several thousand dollars in cash and say registration with a professional college is unnecessary.",
+    "expectedCategories": [
+      "immigration"
+    ],
+    "expectedPatternIds": [
+      "immigration-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "approvals are certain",
+        "guarantee"
+      ],
+      [
+        "know the officers",
+        "influence"
+      ],
+      [
+        "cash",
+        "registration",
+        "licence"
+      ]
+    ]
+  },
+  {
+    "id": "P05",
+    "group": "paraphrased",
+    "title": "Bank code theft without bank name",
+    "groundTruth": "scam",
+    "categoryHint": "",
+    "input": "Someone claiming to protect my financial account says I must tell them the temporary six-number security token and move my funds into a new holding account while they investigate.",
+    "expectedCategories": [
+      "banking"
+    ],
+    "expectedPatternIds": [
+      "banking-001"
+    ],
+    "expectedRiskLevels": [
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "security token",
+        "six-number",
+        "code"
+      ],
+      [
+        "move my funds",
+        "holding account"
+      ],
+      [
+        "protect",
+        "investigate"
+      ]
+    ]
+  },
+  {
+    "id": "P06",
+    "group": "paraphrased",
+    "title": "Parcel micro-payment without common keywords",
+    "groundTruth": "scam",
+    "categoryHint": "",
+    "input": "A courier text says an item cannot be released until I settle a small border charge through an unfamiliar webpage. It asks for my full card details, and I was not expecting anything.",
+    "expectedCategories": [
+      "phishing"
+    ],
+    "expectedPatternIds": [
+      "phishing-002"
+    ],
+    "expectedRiskLevels": [
+      "medium",
+      "high"
+    ],
+    "requiredConcepts": [
+      [
+        "courier",
+        "item"
+      ],
+      [
+        "small",
+        "charge",
+        "card"
+      ],
+      [
+        "unfamiliar webpage",
+        "not expecting"
+      ]
+    ]
+  },
+  {
+    "id": "L01",
+    "group": "legitimate",
+    "title": "Legitimate CRA account notice",
+    "groundTruth": "legitimate",
+    "categoryHint": "cra",
+    "input": "From: no-reply@notification.canada.ca. You have new mail in CRA My Account. For your security, this email contains no link. Open a browser and type canada.ca, then sign in to review the notice. CRA will not ask you to reply with personal information.",
+    "expectedCategories": [
+      "verified-safe",
+      "cra"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "low"
+    ],
+    "requiredConcepts": [
+      [
+        "no link",
+        "type canada.ca"
+      ],
+      [
+        "not ask",
+        "personal information"
+      ]
+    ]
+  },
+  {
+    "id": "L02",
+    "group": "legitimate",
+    "title": "Legitimate job interview invitation",
+    "groundTruth": "legitimate",
+    "categoryHint": "job",
+    "input": "From: recruiting@northstarengineering.ca. Thank you for applying through our careers page. We would like to schedule a 30-minute video interview with two team members. No payment or financial information is required. You may confirm by replying to this company email.",
+    "expectedCategories": [
+      "verified-safe",
+      "job"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "low"
+    ],
+    "requiredConcepts": [
+      [
+        "company email",
+        "careers page"
+      ],
+      [
+        "video interview"
+      ],
+      [
+        "no payment",
+        "financial information"
+      ]
+    ]
+  },
+  {
+    "id": "L03",
+    "group": "legitimate",
+    "title": "Legitimate rental viewing",
+    "groundTruth": "legitimate",
+    "categoryHint": "housing",
+    "input": "Hello, the apartment is available. You can tour it Saturday at 11 a.m. I will bring identification showing I manage the property and a blank Ontario standard lease. Please do not send money before the viewing. If you decide to apply afterward, we can discuss the deposit in writing.",
+    "expectedCategories": [
+      "verified-safe",
+      "housing"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "low"
+    ],
+    "requiredConcepts": [
+      [
+        "tour",
+        "viewing"
+      ],
+      [
+        "standard lease"
+      ],
+      [
+        "do not send money before"
+      ]
+    ]
+  },
+  {
+    "id": "L04",
+    "group": "legitimate",
+    "title": "Legitimate IRCC account notification",
+    "groundTruth": "legitimate",
+    "categoryHint": "immigration",
+    "input": "From: donotreply@cic.gc.ca. There is a new message in your secure IRCC account. This notification does not request payment or personal information. Sign in by navigating independently to canada.ca and choosing your application account.",
+    "expectedCategories": [
+      "verified-safe",
+      "immigration"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "low"
+    ],
+    "requiredConcepts": [
+      [
+        "cic.gc.ca",
+        "canada.ca"
+      ],
+      [
+        "does not request payment"
+      ],
+      [
+        "navigate independently"
+      ]
+    ]
+  },
+  {
+    "id": "L05",
+    "group": "legitimate",
+    "title": "Legitimate bank app alert",
+    "groundTruth": "legitimate",
+    "categoryHint": "banking",
+    "input": "Your bank app sent a notification that a card purchase was declined. The message says not to reply, not to share any verification code, and to open the official mobile app or call the number printed on the back of the card.",
+    "expectedCategories": [
+      "verified-safe",
+      "banking"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "low"
+    ],
+    "requiredConcepts": [
+      [
+        "not share",
+        "verification code"
+      ],
+      [
+        "official mobile app"
+      ],
+      [
+        "number on the back"
+      ]
+    ]
+  },
+  {
+    "id": "L06",
+    "group": "legitimate",
+    "title": "Legitimate parcel update",
+    "groundTruth": "legitimate",
+    "categoryHint": "phishing",
+    "input": "Canada Post tracking update for item CX123456789CA: your package is out for delivery today. No payment is required. Track it by manually entering the number on canadapost-postescanada.ca or in the official app.",
+    "expectedCategories": [
+      "verified-safe",
+      "phishing"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "low"
+    ],
+    "requiredConcepts": [
+      [
+        "tracking",
+        "CX123456789CA"
+      ],
+      [
+        "no payment"
+      ],
+      [
+        "official app",
+        "manually"
+      ]
+    ]
+  },
+  {
+    "id": "A01",
+    "group": "ambiguous",
+    "title": "Vague marketplace request",
+    "groundTruth": "ambiguous",
+    "categoryHint": "",
+    "input": "A person on Marketplace wants to buy my desk. They asked whether I can hold it until Friday and said their brother may pick it up. They have not asked for money or sent a link, but the account is new.",
+    "expectedCategories": [
+      "verified-safe",
+      "phishing"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "low",
+      "medium"
+    ],
+    "requiredConcepts": [
+      [
+        "insufficient",
+        "not enough",
+        "uncertain"
+      ],
+      [
+        "new account",
+        "verify",
+        "caution"
+      ]
+    ]
+  },
+  {
+    "id": "A02",
+    "group": "ambiguous",
+    "title": "Unknown missed-call message",
+    "groundTruth": "ambiguous",
+    "categoryHint": "",
+    "input": "Hi, I tried calling you earlier. Please call me back when you have a moment.",
+    "expectedCategories": [
+      "verified-safe"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "low"
+    ],
+    "requiredConcepts": [
+      [
+        "no clear",
+        "not enough",
+        "ordinary"
+      ],
+      [
+        "verify number",
+        "caution",
+        "do not share"
+      ]
+    ]
+  },
+  {
+    "id": "A03",
+    "group": "ambiguous",
+    "title": "Unfamiliar QR promotion",
+    "groundTruth": "ambiguous",
+    "categoryHint": "",
+    "input": "A flyer at my apartment says I won a free grocery voucher and should scan a QR code to register. It does not name the company and gives no terms or contact information.",
+    "expectedCategories": [
+      "phishing",
+      "verified-safe"
+    ],
+    "expectedPatternIds": [],
+    "expectedRiskLevels": [
+      "medium"
+    ],
+    "requiredConcepts": [
+      [
+        "QR",
+        "scan"
+      ],
+      [
+        "no company",
+        "no terms"
+      ],
+      [
+        "verify",
+        "avoid",
+        "caution"
+      ]
+    ]
+  }
+]

@@ -37,7 +37,12 @@ const PRESETS = [
   },
 ];
 
-export default function MessageInput({ onAnalyze, onPresetSelected, loading }) {
+export default function MessageInput({
+  onAnalyze,
+  onPresetSelected,
+  onInputChange,
+  loading,
+}) {
   const [text, setText] = useState("");
   const [category, setCategory] = useState("");
 
@@ -62,7 +67,10 @@ export default function MessageInput({ onAnalyze, onPresetSelected, loading }) {
         className="textarea"
         placeholder="Paste an email, job offer, housing listing, or text message you're unsure about..."
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => {
+          setText(e.target.value);
+          onInputChange?.();
+        }}
         rows={7}
       />
 

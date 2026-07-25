@@ -1,0 +1,16 @@
+{
+  "scenarioIds": [
+    "S01",
+    "S04",
+    "S06",
+    "S08",
+    "L02",
+    "A01"
+  ],
+  "defaultRuns": 3,
+  "stableFields": [
+    "category",
+    "riskLevel"
+  ],
+  "notes": "Wording may vary. Category, risk band, and core warning signs should remain materially stable."
+}

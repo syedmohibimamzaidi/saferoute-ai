@@ -82,6 +82,11 @@ export default function App() {
         <MessageInput
           onAnalyze={handleAnalyze}
           onPresetSelected={handlePresetSelected}
+          onInputChange={() => {
+            setResult(null);
+            setError("");
+            setHasRun(false);
+          }}
           loading={loading}
         />
 
